@@ -45,8 +45,10 @@ def register(request):
 def edit(request):
     if request.method == 'POST':
         user_form = UserEditForm(instance=request.user, data=request.POST)
-        profile_form = UserProfileEditForm(instance=request.user, data=request.POST, files=request.FILES)
+        profile_form = UserProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
+            print(profile_form.cleaned_data['date_of_birth'])
+            print(profile_form.cleaned_data['photo'])
             user_form.save()
             profile_form.save()
             messages.success(request, 'Profile updated successfully')
