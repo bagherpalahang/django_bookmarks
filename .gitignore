@@ -23,6 +23,8 @@ media
 # Generated files
 .idea/**/contentModel.xml
 
+cert.crt
+cert.key
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
