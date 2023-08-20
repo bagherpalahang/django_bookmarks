@@ -38,14 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # APPS
-    'account.apps.AccountConfig',
     'images.apps.ImagesConfig',
-
-    # Third Party
-    'social_django',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +54,6 @@ MIDDLEWARE = [
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
-    'social_core.backends.facebook.FacebookOAuth2',
 ]
 
 ROOT_URLCONF = 'bookmarks.urls'
