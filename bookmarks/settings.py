@@ -157,3 +157,8 @@ if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
     mimetypes.add_type('text/css', '.css', True)
+
+REDIS_HOST = "esme.iran.liara.ir"
+REDIS_PORT = 33785
+REDIS_PASS = "JVtuGDGNCy1ElbbpqwQEO1c1"
+REDIS_DB = 0
